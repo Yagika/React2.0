@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 
-import Post from "../Post/Post";
+import {Post} from '../../../components';
 import './Posts.css'
 
-const Posts = () => {
+export const Posts = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -16,5 +16,3 @@ const Posts = () => {
         </div>
     );
 };
-
-export default Posts;

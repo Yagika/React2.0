@@ -1,6 +1,6 @@
 import './User.css'
 
-const User = ({user}) => {
+export const User = ({user}) => {
     let {id, name, username, phone, email} = user;
     return (
         <div className={'user'}>
@@ -11,5 +11,3 @@ const User = ({user}) => {
         </div>
     );
 };
-
-export default User;

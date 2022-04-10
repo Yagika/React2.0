@@ -2,7 +2,7 @@ import Comment from "../Comment/Comment";
 import './Comments.css'
 import {useEffect, useState} from "react";
 
-const Comments = () => {
+export const Comments = () => {
     const [comments, setComments] = useState([])
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
@@ -15,5 +15,3 @@ const Comments = () => {
         </div>
     );
 };
-
-export default Comments;

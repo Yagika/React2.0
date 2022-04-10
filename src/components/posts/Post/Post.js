@@ -1,6 +1,6 @@
 import './Post.css'
 
-const Post = ({post}) => {
+export const Post = ({post}) => {
     let {id, title, body} = post
     return (
         <div className={'post'}>
@@ -10,4 +10,3 @@ const Post = ({post}) => {
     );
 };
 
-export default Post;

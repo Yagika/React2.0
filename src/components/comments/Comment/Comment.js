@@ -1,6 +1,6 @@
 import './Comment.css'
 
-const Comment = ({comment}) => {
+export const Comment = ({comment}) => {
     let {id, name, email, body} = comment
     return (
         <div className={'comment'}>
@@ -10,5 +10,3 @@ const Comment = ({comment}) => {
         </div>
     );
 };
-
-export default Comment;
