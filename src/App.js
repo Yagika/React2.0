@@ -5,12 +5,12 @@ function App() {
     return (
         <div className={'app'}>
             <div className={'user_post'}>
-                <div>
+                <div className={'userdiv'}>
                     <h1>Users</h1>
                     <Users/>
                 </div>
 
-                <div>
+                <div className={'postdiv'}>
                     <h1>Posts</h1>
                     <Posts/>
                 </div>

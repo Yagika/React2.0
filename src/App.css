@@ -4,3 +4,9 @@
 .user_post{
     display: flex;
 }
+.userdiv{
+    width: 30%;
+}
+.postdiv{
+    width: 69%;
+}
