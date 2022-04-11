@@ -1,6 +1,11 @@
 .user{
     width: 300px;
     text-align: center;
-    background: #f6e2d4;
     margin: 5px;
+}
+.beige{
+    background: #f6e2d4;
+}
+.brown{
+    background: #e7c3aa;
 }
