@@ -1,0 +1,17 @@
+.details {
+    text-align: center;
+}
+
+.btn button{
+    border-radius: 5px;
+    width: 45%;
+    margin: 7px;
+    border: none;
+    background: rgba(0, 0, 0, 0.63);
+    font-weight: bold;
+    color: aliceblue;
+}
+.btn button:hover{
+    background: rgba(0, 0, 0, 0.83);
+
+}

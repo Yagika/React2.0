@@ -4,3 +4,6 @@
     align-items: center;
     justify-content: space-between;
 }
+.posts h1{
+    width: 100%;
+}

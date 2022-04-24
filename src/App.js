@@ -1,23 +1,27 @@
-import {Users, Posts, Comments} from "./components"
-import './App.css'
+import {useState} from "react";
+
+import {Users, Posts} from "./components"
+import acss from './App.module.css'
+import {postsService} from "./services";
 
 function App() {
-    return (
-        <div className={'app'}>
-            <div className={'user_post'}>
-                <div className={'userdiv'}>
-                    <h1>Users</h1>
-                    <Users/>
-                </div>
+    const [posts, setPosts] = useState(null)
 
-                <div className={'postdiv'}>
-                    <h1>Posts</h1>
-                    <Posts/>
-                </div>
+    const getUserId = (id) => {
+            postsService.getUsersPostsById(id).then(({data}) => setPosts(data))
+    }
+
+    return (
+        <div className={acss.app}>
+            <div>
+                <Users getUserId={getUserId}/>
             </div>
-            <hr/>
-            <h1>Comments</h1>
-            <Comments/>
+
+            {posts &&
+                <div>
+                    <Posts posts={posts}/>
+                </div>
+            }
         </div>
     );
 }

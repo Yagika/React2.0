@@ -1,6 +1,10 @@
-import {constants} from '../constants'
+import {axiosService} from "./axios.service";
+import {urls} from "../constants";
 
-export const usersService = {
-    getAllUsers: () => fetch(constants.apiUrl + 'users').then(value => value.json())
+const usersService = {
+    getAllUsers: () => axiosService.get(urls.users),
+    getUserById: (id) => axiosService.get(`${urls.users}/${id}`)
 
 }
+
+export {usersService}

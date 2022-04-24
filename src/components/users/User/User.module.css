@@ -1,0 +1,25 @@
+.user{
+    width: 45%;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+}
+.beige{
+    background: #f6e2d4;
+}
+.brown{
+    background: #e7c3aa;
+}
+.user button{
+    border-radius: 5px;
+    width: 45%;
+    margin: 7px;
+    border: none;
+    background: rgba(0, 0, 0, 0.63);
+    font-weight: bold;
+    color: aliceblue;
+}
+.user button:hover{
+    background: rgba(0, 0, 0, 0.83);
+
+}

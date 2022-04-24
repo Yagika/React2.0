@@ -1,0 +1,12 @@
+.post{
+    width: 19%;
+    background: #574137;
+    margin: 5px;
+    height: 270px;
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 2px;
+}
+.post h3{
+    text-align: center;
+}

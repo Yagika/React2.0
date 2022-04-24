@@ -1,6 +1,7 @@
-import {constants} from '../constants'
+import {axiosService} from "./axios.service";
+import {urls} from "../constants";
 
-export const postsService = {
-    getAllPosts: () => fetch(constants.apiUrl + 'posts').then(value => value.json())
-
+const postsService = {
+    getUsersPostsById: (id) => axiosService.get(`${urls.users}/${id}/posts`)
 }
+export {postsService}
