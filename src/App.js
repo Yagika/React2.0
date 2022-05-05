@@ -1,27 +1,19 @@
 import {useState} from "react";
 
-import {Users, Posts} from "./components"
+import {Users, Posts, UserDetails} from "./components"
 import acss from './App.module.css'
-import {postsService} from "./services";
 
 function App() {
-    const [posts, setPosts] = useState(null)
-
-    const getUserId = (id) => {
-            postsService.getUsersPostsById(id).then(({data}) => setPosts(data))
-    }
+    const [userId, setUserId] = useState(null)
+    const [user, setUser] = useState(null)
 
     return (
         <div className={acss.app}>
-            <div>
-                <Users getUserId={getUserId}/>
+            <div className={acss.wrap}>
+                <Users setUser={setUser} setUserId={setUserId}/>
+                {user && <UserDetails user={user} setUserId={setUserId}/>}
             </div>
-
-            {posts &&
-                <div>
-                    <Posts posts={posts}/>
-                </div>
-            }
+            {userId && <Posts userId={userId}/>}
         </div>
     );
 }

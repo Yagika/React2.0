@@ -1,7 +1,11 @@
 import udcss from "./UserDetails.module.css"
 
-const UserDetails = ({user,getUserId}) => {
-    const {id,name,email,phone,username,website,address:{city,street,suite,zipcode,geo:{lat,lng}},company:{catchPhrase,bs},company}=user;
+const UserDetails = ({user, setUserId}) => {
+    const {
+        id, name, email, phone, username, website, company,
+        address: {city, street, suite, zipcode, geo: {lat, lng}},
+        company: {catchPhrase, bs}
+    } = user;
 
     return (
         <div className={udcss.details}>
@@ -25,9 +29,10 @@ const UserDetails = ({user,getUserId}) => {
                 BS:{bs}
             </p>
             <div className={udcss.btn}>
-                <button onClick={() => getUserId(id)}>Posts</button>
+                <button onClick={() => {setUserId(id)}}>Posts</button>
             </div>
         </div>
+
     );
 };
 

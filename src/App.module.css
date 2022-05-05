@@ -1,4 +1,6 @@
+.wrap{
+    display: flex;
+}
 .app h1{
     text-align: center;
 }
-

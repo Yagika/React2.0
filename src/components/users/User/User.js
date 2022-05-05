@@ -1,7 +1,11 @@
 import ucss from './User.module.css'
 
-const User = ({user,getId}) => {
+const User = ({user,getId,setUserId}) => {
     let {id, name, username, phone, email} = user;
+    const click = () => {
+        setUserId(false)
+        getId(id)
+    }
     return (
         <div
             className={`${ucss.user} ${user.id === 2 || user.id === 3 || user.id === 6 || user.id === 7 || user.id === 10 ? ucss.beige : ucss.brown}`}>
@@ -10,7 +14,7 @@ const User = ({user,getId}) => {
             <p>{email}</p>
             <p>{phone}</p>
             <div>
-                <button onClick={() => getId(id)}>Details</button>
+                <button onClick={click}>Details</button>
             </div>
         </div>
     );
